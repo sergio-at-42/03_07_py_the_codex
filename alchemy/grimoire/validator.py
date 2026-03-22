@@ -1,0 +1,5 @@
+def validate_ingredients(ingredients: str) -> str:
+    if ingredients in ["fire", "water", "earth", "air"]:
+        return f"{ingredients} - VALID"
+    else:
+        return f"{ingredients} - INVALID"
