@@ -4,7 +4,7 @@ import alchemy.elements
 from alchemy.elements import create_water
 from alchemy.potions import healing_potion as heal
 from alchemy.elements import create_earth, create_air
-from alchemy.potions import *
+from alchemy.potions import strength_potion
 
 
 def ft_import_transmutation() -> None:

@@ -1,4 +1,10 @@
-from alchemy.elements import create_fire, create_water, create_earth, create_air
+from alchemy.elements \
+    import create_fire, create_water, create_earth, create_air
+
+__all__ = ["healing_potion",
+           "strength_potion",
+           "invisibility_potion",
+           "wisdom_potion"]
 
 
 def healing_potion() -> str:
@@ -10,8 +16,10 @@ def strength_potion() -> str:
 
 
 def invisibility_potion() -> str:
-    return f"Invisibility potion brewed with {create_air()} and {create_water()}"
+    return f"Invisibility potion brewed with {create_air()} \
+        and {create_water()}"
 
 
 def wisdom_potion() -> str:
-    return f"Wisdom potion brewed with all elements: {create_fire()} {create_water()} {create_earth()} {create_fire()}"
+    return f"Wisdom potion brewed with all elements: {create_fire()} \
+        {create_water()} {create_earth()} {create_fire()}"

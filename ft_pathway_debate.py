@@ -2,7 +2,7 @@
 
 from alchemy.transmutation.basic import lead_to_gold, stone_to_gem
 from alchemy.transmutation.advanced import philosophers_stone, elixir_of_life
-from alchemy.transmutation import lead_to_gold, philosophers_stone
+import alchemy.transmutation
 
 
 def ft_pathway_debate() -> None:
@@ -17,8 +17,10 @@ def ft_pathway_debate() -> None:
     print(f"elixir_of_life(): {elixir_of_life()}")
     print("")
     print("Testing Package Access:")
-    print(f"alchemy.transmutation.lead_to_gold(): {lead_to_gold()}")
-    print(f"alchemy.transmutation.philosophers_stone(): {philosophers_stone()}")
+    print("alchemy.transmutation.lead_to_gold():", end=" ")
+    print(f"{alchemy.transmutation.lead_to_gold()}")
+    print("alchemy.transmutation.philosophers_stone():", end=" ")
+    print(f"{alchemy.transmutation.philosophers_stone()}")
     print("")
     print("Both pathways work! Absolute: clear, Relative: concise")
 

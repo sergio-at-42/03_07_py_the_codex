@@ -5,24 +5,28 @@ import alchemy
 
 def ft_sacred_scroll() -> None:
     print("Testing direct module access:")
-    print(f"alchemy.elements.create_fire(): {alchemy.elements.create_fire()}")
-    print(f"alchemy.elements.create_water(): {alchemy.elements.create_water()}")
-    print(f"alchemy.elements.create_earth(): {alchemy.elements.create_earth()}")
-    print(f"alchemy.elements.create_air():  {alchemy.elements.create_air()}")
+    print("alchemy.elements.create_fire():", end=" ")
+    print(f"{alchemy.elements.create_fire()}")
+    print("alchemy.elements.create_water():", end=" ")
+    print(f"{alchemy.elements.create_water()}")
+    print("alchemy.elements.create_earth():", end=" ")
+    print(f"{alchemy.elements.create_earth()}")
+    print("alchemy.elements.create_air():", end=" ")
+    print(f"{alchemy.elements.create_air()}")
     print("")
     print("Testing package-level access (controlled by __init__.py):")
     print(f"alchemy.create_fire(): {alchemy.create_fire()}")
     print(f"alchemy.create_water(): {alchemy.create_water()}")
     try:
         print("alchemy.create_earth():", end=" ")
-        print({alchemy.create_earth()})
+        print({alchemy.create_earth()})  # type: ignore[attr-defined]
     except AttributeError:
-        print ("AttributeError - not exposed")
+        print("AttributeError - not exposed")
     try:
         print("alchemy.create_air():", end=" ")
-        print({alchemy.create_air()})
+        print({alchemy.create_air()})  # type: ignore[attr-defined]
     except AttributeError:
-        print ("AttributeError - not exposed")
+        print("AttributeError - not exposed")
     print("")
     print("Package metadata:")
     print(f"Version: {alchemy.__version__}")
