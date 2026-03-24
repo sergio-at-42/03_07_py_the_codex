@@ -12,7 +12,7 @@ def ft_circular_curse() -> None:
     print(f"{validate_ingredients("dragon scales")}")
     print("")
     print("Testing spell recording with validation:")
-    print("record_spell(\"Fireball\", \"fire\"): ", end=" ")
+    print("record_spell(\"Fireball\", \"fire\"):", end=" ")
     print(f"{record_spell("Fireball", "fire")}")
     print("record_spell(\"Dark Magic\", \"shadow\"):", end=" ")
     print(f"{record_spell("Dark Magic", "shadow")}")
